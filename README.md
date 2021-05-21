@@ -8,7 +8,7 @@
 5.3 프로젝트 적용하기<br>
 5.4 커트롤러와 화면처리<br>
 
-06장 @RestController와 JSON 처리
-6.1 JSON과 Ajax로 댓글처리
-6.2 ReplyDTO와 ReplyService/ReplyController
-6.3 조회 화면에서 처리
+06장 @RestController와 JSON 처리 <br><br>
+6.1 JSON과 Ajax로 댓글처리<br>
+6.2 ReplyDTO와 ReplyService/ReplyController <br>
+6.3 조회 화면에서 처리 <br>
