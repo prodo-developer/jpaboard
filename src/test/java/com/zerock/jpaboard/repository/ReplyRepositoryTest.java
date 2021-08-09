@@ -20,9 +20,9 @@ class ReplyRepositoryTest {
     @Test
     @DisplayName("300개의 댓글을 1~100사이의 번호로 추가합니다")
     public void insertBoard() {
-        IntStream.rangeClosed(1,300).forEach(i-> {
+        IntStream.rangeClosed(1, 300).forEach(i -> {
 
-            long bno = (long)(Math.random() * 100) +1;
+            long bno = (long) (Math.random() * 100) + 1;
 
             Board board = Board.builder().bno(bno).build();
 
