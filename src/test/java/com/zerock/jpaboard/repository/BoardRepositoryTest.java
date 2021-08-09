@@ -26,7 +26,7 @@ class BoardRepositoryTest {
     @Test
     @DisplayName("회원 100명이 게시글 100개 작성합니다.")
     public void insertBoard() {
-        IntStream.rangeClosed(1,100).forEach(i ->{
+        IntStream.rangeClosed(1, 100).forEach(i -> {
             Member member = Member.builder().email("user" + i + "@aaa.com").build();
 
             Board board = Board.builder()
