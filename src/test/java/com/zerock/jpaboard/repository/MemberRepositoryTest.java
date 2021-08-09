@@ -17,7 +17,7 @@ class MemberRepositoryTest {
     @Test
     @DisplayName("회원 데이터 100명 만들기")
     public void insertMembers() {
-        IntStream.rangeClosed(1,100).forEach(i -> {
+        IntStream.rangeClosed(1, 100).forEach(i -> {
 
             Member member = Member.builder()
                     .email("user" + i + "@aaa.com")
