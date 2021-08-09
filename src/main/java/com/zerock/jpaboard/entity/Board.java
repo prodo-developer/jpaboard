@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @ToString(exclude = "writer") // @ToString는 항상 exclude 합니다. 지연로딩 사용시 반드시 선언
-public class Board extends BaseEntity{
+public class Board extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +20,7 @@ public class Board extends BaseEntity{
 
     private String content;
 
-//    @ManyToOne // 다대일 디폴트 (FetchType.EAGER)
+    //    @ManyToOne // 다대일 디폴트 (FetchType.EAGER)
     @ManyToOne(fetch = FetchType.LAZY) // 다대일 명시적으로 지연 로딩 지정
     private Member writer; // 연관관계 지정
 
