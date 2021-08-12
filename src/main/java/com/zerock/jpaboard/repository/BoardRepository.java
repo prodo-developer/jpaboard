@@ -1,6 +1,7 @@
 package com.zerock.jpaboard.repository;
 
 import com.zerock.jpaboard.entity.Board;
+import com.zerock.jpaboard.repository.search.SearchBoardRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,7 +10,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface BoardRepository extends JpaRepository<Board, Long> {
+public interface BoardRepository extends JpaRepository<Board, Long>, SearchBoardRepository {
     // 한개의 로우(Object) 내에 Object[ ]로 나옴
     // 연관관계가 없는 엔티티 조인 처리에는 on
     @Query("select b, w from Board b left outer join b.writer w where b.bno =:bno")
