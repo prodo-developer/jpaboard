@@ -134,7 +134,8 @@ public class SearchBoardRepositoryImpl extends QuerydslRepositorySupport impleme
 
         log.info("COUNT: " +count);
 
-        return new PageImpl<Object[]>(
+        // 쿼리 실행결과로 Board, Member, 댓글 수 를 Object [] 리스트로 처리
+       return new PageImpl<Object[]>(
                 result.stream().map(t -> t.toArray()).collect(Collectors.toList()),
                 pageable,
                 count);
